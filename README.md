@@ -20,7 +20,7 @@ This project scrapes, cleans, visualizes and models data from the 2024 NBA seaso
    - It then visualizes the data with `matplotlib`, generating plots that are saved to the `output` directory.
   
 4. **Examples**
-   ![Average Points Per Game VS Position](./Users/leohsu/Desktop/Predict NBA Points Per Game/Average Points Per Game VS Position.png)
+- ![Average Points Per Game VS Position] (/Users/leohsu/Desktop/Predict NBA Points Per Game/Average Points Per Game VS Position.png)
   
 
 ## Packages
