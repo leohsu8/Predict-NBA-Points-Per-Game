@@ -10,7 +10,8 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 ### Cool Techniques
 1. Implemented `scikit learn` tools to create a 99.99% accurate `multiple regression model` to predict Points Per Game and to optimize a `K-Nearest Neighbors model`, a `Decision Tree Regressor model`, and a `Random Forest Regressor model`.
 2. Used `seaborn` to visualize `Pearson Correlation` values and prevent overfitting of machine learning models by dropping highly correlated variables.
-3. Created eaisly-digestible graphics using `matplotlib` and `plotly` of relevant relationships between variables
+3. Created eaisly-digestible graphics using `matplotlib` and `plotly` of relevant relationships between variables <br>
+![Open Position Counts](./Visualizations/PositionCounts.png)
 
 ### Challenges
 1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Multiple Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was "good enough". Next, I tried to use `Variance Inflation Factor (VIF)` to measure the severity of multicollinearity between variables and attempted to exclude values above a certain `VIF` threshold, but cutting off at the standard 5 `VIF` left me with only a few variables.
