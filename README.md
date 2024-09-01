@@ -9,13 +9,15 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 
 ### Cool Techniques
 1. Implemented `scikit learn` tools to create a 99.99% accurate `multiple regression model` to predict Points Per Game and to optimize a `K-Nearest Neighbors model`, a `Decision Tree Regressor model`, and a `Random Forest Regressor model`.
-2. Used `seaborn` to visualize `Pearson Correlation` values and prevent overfitting of machine learning models by dropping highly correlated variables.
-3. Created eaisly-digestible graphics using `matplotlib` and `plotly` of relevant relationships between variables <br>
-![Open Position Counts](./Visualizations/PositionCounts.png)
+2. Used `seaborn` to visualize `Pearson Correlation` values and prevent overfitting of machine learning models by dropping highly correlated variables. <br>
+![Corr Heatmap](./Visualizations/CorrelationHeatmap.png)
+4. Created eaisly-digestible graphics using `matplotlib` and `plotly` of relevant relationships between variables <br>
+![Variable Relationships](./Visualizations/RelationshipsBetweenDifferentVariables.png)
 
 ### Challenges
-1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Multiple Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was "good enough". Next, I tried to use `Variance Inflation Factor (VIF)` to measure the severity of multicollinearity between variables and attempted to exclude values above a certain `VIF` threshold, but cutting off at the standard 5 `VIF` left me with only a few variables.
-2. I haven't worked with machine learning techniques before, so the learning curve was steep, and I'm open to ways I can improve my analysis!
+1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Multiple Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was a "low enough" value. Next, I tried to use `Variance Inflation Factor (VIF)` to measure the severity of multicollinearity between variables and attempted to exclude values above a certain `VIF` threshold, but cutting off at the standard of 5 `VIF` left me with only a few variables. I decided to use the `Pearson Correlation` because it allowed me to control specific cutt-off thresholds for each variable.
+2. On [`basketball-reference.com`](https://www.basketball-reference.com), the player data lists players who were traded during the season multiple times. It lists their stats with their first team, their second team, and their total season stats. To prrevent these traded players from being counted multiple times and skewing the results of visuilizations and analysis, I split the data into two data sets `df_totals` (the DataFrame with the season totals), and `df_no_totals` (the DataFrame with the first and second team stats).
+3. I haven't worked with machine learning techniques before, so the learning curve was steep, and I'm open to ways I can improve this project!
 
 ### What else I would have liked to do...
 1. Implement a method to input values of variables used for prediction and have the machine learning model output a predicted value
