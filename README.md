@@ -1,7 +1,10 @@
 # Predict-NBA-Points-Per-Game
 
-## Overview
-This project scrapes, cleans, visualizes and models data from the 2024 NBA season. 
+## Project Overview
+This project scrapes, cleans, visualizes and uses machine learning to predict the points per game of players from the 2024 NBA season. 1. Web scrape player data from [`basketball-reference.com`](https://www.basketball-reference.com).
+2. Read in and clean the html using BeautifulSoup
+3. Parse the individual statistics into pandas DataFrames that will be used for both visualizations and machine learning
+4. Select features to identify good predictors, and train machine learning models to predict points per game
 
 ## How the Project Works
 
