@@ -14,6 +14,7 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 
 ### Challenges
 1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Multiple Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was "good enough". Next, I tried to use `Variance Inflation Factor (VIF)` to measure the severity of multicollinearity between variables and attempted to exclude values above a certain `VIF` threshold, but cutting off at the standard 5 `VIF` left me with only a few variables.
+2. I haven't worked with machine learning techniques before, so the learning curve was steep, and I'm open to ways I can improve my analysis!
 
 ### What else I would have liked to do...
 1. Implement a method to input values of variables used for prediction and have the machine learning model output a predicted value
@@ -21,14 +22,15 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 3. Explore other machine learning techniques to model the data
 4. See how well this model will predict `points per game` in future seasons
 
-## Code
-File Overview: <b>
+### Code
+File Overview: <br>
    - `get_clean_data.ipynb`: web scrapes data, cleans it, and prepares two .csv files for visualization and modeling
-   - `visualiza.ipynp`: creates visualizations of relationships between variables in the data
-   - `model`: creates and optimizes four different machine learning models to predict  `Points Per Game` using the data
+   - `visualize.ipynp`: creates visualizations of relationships between variables in the data
+   - `model.ipynb`: creates and optimizes four different machine learning models to predict  `Points Per Game` using the data
 
 ## Run this project yourself!
-1. **Local Setup**
+### 1. Local Setup <br>
+
 Please install the following locally:
    - JupyterLab/JupyterNotebook
    - Python 3.8+
@@ -36,21 +38,14 @@ Please install the following locally:
       - [`BeautifulSoup`](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): Used for scraping html.
       - [`pandas`](https://pandas.pydata.org/docs/index.html): Used for cleaning and manipulating data.
       - [`matplotlib`](https://matplotlib.org/stable/index.html): Used for plotting and visualizing data.
-      - ['plotly`](https://plotly.com/python/): Used for plotting and visualizing data.
+      - [`plotly`](https://plotly.com/python/): Used for plotting and visualizing data.
       - [`seaborn`](https://seaborn.pydata.org): Used for visualizing correlations.
       - [`scikit learn`](https://scikit-learn.org/stable/): Used for creating maching learning models.
 
-2. **Data** <b>
+### 2. Data <br>
 
-Either use the pre-scraped data set [`here`](https://drive.google.com/file/d/1u_ye37Lv-_RNMaVj6WS5EWfmfWi16R1n/view?usp=share_link)
+Either use the pre-scraped data set [`here`](https://drive.google.com/drive/folders/1Ywo_Pqlyr6psnKRL9X-ettpqIKeGAV_u?usp=share_link) and start running the code form the `visualize.ipynb` onward
 
 **OR**
 
 Run the `get_clean_data.ipynb` to scrape and clean the data yourself!
-
-5. **Details**:
-   - The project takes input data in CSV format and processes it using `pandas`.
-   - It then visualizes the data with `matplotlib`, generating plots that are saved to the `output` directory.
-  
-6. **Examples**
-   - ![Average Points Per Game VS Position] (./Average Points Per Game VS Position.png)
