@@ -17,7 +17,7 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 
 2. Used `Variance Inflation Factor` values to select variables and prevent overfitting of machine learning models, which helped achiece over 90% accurate predictions of points per game for the `Linear Regression`, `Decision Tree Regression`, and `Random Forest Regression` models
 
-
+   [Final Varibales Selected with VIF threshold set to 10](./Visualizations/Variables<10VIF.csv)
 
 3. Measured efficacy of models using four parameters `R2 Score`, `Adjusted R2 Score`, `Cross-Validated R2 Score`, and `Root Mean Squared Error` and created eaisly digestible visualizations of the relationships between these values between models
    
@@ -27,15 +27,14 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 ![Root Mean Squared Error](./Visualizations/RMSE.png)
 
 ### Challenges
-1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Linear Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was a "low enough" value. Next, I tried to use `Pearson Correlation` to select specific variables to remove, but since `Pearson Correlation` only measures the correlation between two variables, this method did nto work for my multi-variable model. Finding eliminating variables until all `VIF` values were less than 10 ended up being the most accurate way to perform feature selection.
+1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Linear Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was a "low enough" value. Next, I tried to use `Pearson Correlation` to select specific variables to remove, but since `Pearson Correlation` only measures the correlation between two variables, this method did nto work for my multi-variable model. Eliminating variables until all `VIF` values were less than 10 ended up being the most accurate way to perform feature selection.
 2. On [`basketball-reference.com`](https://www.basketball-reference.com), the player data lists players who were traded during the season multiple times. It lists their stats with their first team, their second team, and their total season stats. To prrevent these traded players from being counted multiple times and skewing the results of visuilizations and analysis, I split the data into two data sets `df_totals` (the DataFrame with the season totals), and `df_no_totals` (the DataFrame with the first and second team stats).
 3. I haven't worked with machine learning techniques before, so the learning curve was steep, and I'm open to ways I can improve this project!
 
 ### What else I would have liked to do...
-1. Implement a method to input values of variables used for prediction and have the machine learning model output a predicted value
-2. Create visualizations for the machine learning models
-3. Explore other machine learning techniques to model the data
-4. See how well this model will predict `points per game` in future seasons
+1. Implement a method to input values of variables used for prediction and have the machine learning models output their predicted values
+2. Implement `scikit learn`'s `GridSearchCV` method to to tune the hyerparaeters of my models
+3. Explore more into how the regularized machine learning models like account for correlations between variables
 
 ### Code
 File Overview: <br>
