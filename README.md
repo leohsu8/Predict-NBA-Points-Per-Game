@@ -12,17 +12,22 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 1. Implemented `scikit learn` tools to predict points per game with over 99% accuracy with regularized machine learning models (`Ridge Regression`, `Lasso Regression`, and `Bayesian Ridge Regression`) <br>
 
 ![Ridge Regression](./Visualizations/RidgePredictedPPGVSActualPPG.png)
+![Lasso Regression](./Visualizations/LassoPredictedPPGVSActualPPG.png)
+![Bayesian Ridge Regression](./Visualizations/BayesianPredictedPPGVSActualPPG.png)
 
 2. Used `Variance Inflation Factor` values to select variables and prevent overfitting of machine learning models, which helped achiece over 90% accurate predictions of points per game for the `Linear Regression`, `Decision Tree Regression`, and `Random Forest Regression` models
 
-![Corr Heatmap](./Visualizations/CorrelationHeatmap.png)
+
 
 3. Measured efficacy of models using four parameters `R2 Score`, `Adjusted R2 Score`, `Cross-Validated R2 Score`, and `Root Mean Squared Error` and created eaisly digestible visualizations of the relationships between these values between models
    
-![Variable Relationships](./Visualizations/RelationshipsBetweenDifferentVariables.png)
+![R2](./Visualizations/R2.png)
+![AdjustedR2](./Visualizations/AdjR2.png)
+![Cross-Validated R2](./Visualizations/CVR2.png)
+![Root Mean Squared Error](./Visualizations/RMSE.png)
 
 ### Challenges
-1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Multiple Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was a "low enough" value. Next, I tried to use `Variance Inflation Factor (VIF)` to measure the severity of multicollinearity between variables and attempted to exclude values above a certain `VIF` threshold, but cutting off at the standard of 5 `VIF` left me with only a few variables. I decided to use the `Pearson Correlation` because it allowed me to control specific cutt-off thresholds for each variable.
+1. I struggled with finding the proper methods to prevent over fitting in the machine learning models. First, I experimented with and creating visualizations of changes in the `Akaike Information Criterion (AIC)` and the `Bayesian Information Criterion BIC` values of my `Linear Regression Model` to determine the optimal number of variables to include in the model, but the process lacked specificity, and was open to too much personal interpretation of what was a "low enough" value. Next, I tried to use `Pearson Correlation` to select specific variables to remove, but since `Pearson Correlation` only measures the correlation between two variables, this method did nto work for my multi-variable model. Finding eliminating variables until all `VIF` values were less than 10 ended up being the most accurate way to perform feature selection.
 2. On [`basketball-reference.com`](https://www.basketball-reference.com), the player data lists players who were traded during the season multiple times. It lists their stats with their first team, their second team, and their total season stats. To prrevent these traded players from being counted multiple times and skewing the results of visuilizations and analysis, I split the data into two data sets `df_totals` (the DataFrame with the season totals), and `df_no_totals` (the DataFrame with the first and second team stats).
 3. I haven't worked with machine learning techniques before, so the learning curve was steep, and I'm open to ways I can improve this project!
 
@@ -37,6 +42,8 @@ File Overview: <br>
    - `get_clean_data.ipynb`: web scrapes data, cleans it, and prepares two .csv files for visualization and modeling
    - `visualize.ipynp`: creates visualizations of relationships between variables in the data
    - `model.ipynb`: creates and optimizes four different machine learning models to predict  `Points Per Game` using the data
+<br>
+**Reminder:** Make sure to change the file paths to your own in the code!
 
 ## Run this project yourself!
 ### 1. Local Setup <br>
@@ -51,6 +58,7 @@ Please install the following locally:
       - [`plotly`](https://plotly.com/python/): Used for plotting and visualizing data.
       - [`seaborn`](https://seaborn.pydata.org): Used for visualizing correlations.
       - [`scikit learn`](https://scikit-learn.org/stable/): Used for creating maching learning models.
+      - [`statsmodels`](https://www.statsmodels.org/stable/index.html): Used for `VIF` calculations.
 
 ### 2. Data <br>
 
