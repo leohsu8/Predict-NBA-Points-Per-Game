@@ -9,7 +9,9 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 5. Train machine learning models to predict points per game.<br>
 
 ### Cool Techniques
-1. Implemented `scikit learn` tools to predict points per game with over 99% accuracy with regularized machine learning models (`Ridge Regression`, `Lasso Regression`, and `Bayesian Ridge Regression`)
+1. Implemented `scikit learn` tools to predict points per game with over 99% accuracy with regularized machine learning models (`Ridge Regression`, `Lasso Regression`, and `Bayesian Ridge Regression`) <br>
+
+![Ridge Regression](./Visualizations/RidgePredictedPPGVSActualPPG.png)
 
 2. Used `Variance Inflation Factor` values to select variables and prevent overfitting of machine learning models, which helped achiece over 90% accurate predictions of points per game for the `Linear Regression`, `Decision Tree Regression`, and `Random Forest Regression` models
 
