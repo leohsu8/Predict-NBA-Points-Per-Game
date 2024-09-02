@@ -4,14 +4,19 @@
 This project scrapes, cleans, visualizes and uses machine learning to predict the points per game of players from the 2024 NBA season. <br>
 1. Web scrape player data from [`basketball-reference.com`](https://www.basketball-reference.com).<br>
 2. Read in and clean the html using BeautifulSoup.<br>
-3. Parse the individual statistiacs into pandas DataFrames that will be used for both visualizations and machine learning.<br>
-4. Select features to identify good predictors, and train machine learning models to predict points per game.<br>
+3. Parse the individual statistiacs into `pandas` DataFrames that will be used for both visualizations and machine learning.<br>
+4. Select features to prevent model overfitting.
+5. Train machine learning models to predict points per game.<br>
 
 ### Cool Techniques
-1. Implemented `scikit learn` tools to create a 99.99% accurate `multiple regression model` to predict Points Per Game and to optimize a `K-Nearest Neighbors model`, a `Decision Tree Regressor model`, and a `Random Forest Regressor model`.
-2. Used `seaborn` to visualize `Pearson Correlation` values and prevent overfitting of machine learning models by dropping highly correlated variables. <br>
+1. Implemented `scikit learn` tools to predict points per game with over 99% accuracy with regularized machine learning models (`Ridge Regression`, `Lasso Regression`, and `Bayesian Ridge Regression`)
+
+2. Used `Variance Inflation Factor` values to select variables and prevent overfitting of machine learning models, which helped achiece over 90% accurate predictions of points per game for the `Linear Regression`, `Decision Tree Regression`, and `Random Forest Regression` models
+
 ![Corr Heatmap](./Visualizations/CorrelationHeatmap.png)
-4. Created eaisly-digestible graphics using `matplotlib` and `plotly` of relevant relationships between variables <br>
+
+3. Measured efficacy of models using four parameters `R2 Score`, `Adjusted R2 Score`, `Cross-Validated R2 Score`, and `Root Mean Squared Error` and created eaisly digestible visualizations of the relationships between these values between models
+   
 ![Variable Relationships](./Visualizations/RelationshipsBetweenDifferentVariables.png)
 
 ### Challenges
