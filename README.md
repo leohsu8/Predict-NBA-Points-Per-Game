@@ -19,7 +19,7 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 
    [Final Varibales Selected with VIF threshold set to 10](./Visualizations/Variables<10VIF.csv)
 
-3. Measured efficacy of models using four parameters: 1. `R2 Score`, 2. `Adjusted R2 Score`, 3. `Cross-Validated R2 Score`, and 4. `Root Mean Squared Error` and created easily digestible visualizations of the relationships between these values between models
+3. Measured efficacy of models using four parameters: `R2 Score`, `Adjusted R2 Score`, `Cross-Validated R2 Score`, and `Root Mean Squared Error` and created easily digestible visualizations of the relationships between these values between models
    
 ![R2](./Visualizations/R2.png)
 ![AdjustedR2](./Visualizations/AdjR2.png)
