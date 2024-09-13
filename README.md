@@ -42,7 +42,7 @@ File Overview: <br>
    - `visualize.ipynp`: creates visualizations of relationships between variables in the data
    - `model.ipynb`: creates and optimizes four different machine learning models to predict  `Points Per Game` using the data
 <br>
-__Reminder__ Make sure to change the file paths to your own in the code!
+<b>Reminder<b> Make sure to change the file paths to your own in the code!
 
 ## Run this project yourself!
 ### 1. Local Setup <br>
