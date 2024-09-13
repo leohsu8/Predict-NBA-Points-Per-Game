@@ -15,7 +15,7 @@ This project scrapes, cleans, visualizes and uses machine learning to predict th
 ![Lasso Regression](./Visualizations/LassoPredictedPPGVSActualPPG.png)
 ![Bayesian Ridge Regression](./Visualizations/BayesianPredictedPPGVSActualPPG.png)
 
-2. Used `Variance Inflation Factor` values to perform feature selection and prevent overfitting of machine learning models, which helped achiece over 90% accurate predictions of points per game for the `Linear Regression`, `Decision Tree Regression`, and `Random Forest Regression` models
+2. Used `Variance Inflation Factor` values to perform feature selection and prevent overfitting of machine learning models, which helped achieve over 90% accurate predictions of points per game for the `Linear Regression`, `Decision Tree Regression`, and `Random Forest Regression` models
 
    [Final Varibales Selected with VIF threshold set to 10](./Visualizations/Variables<10VIF.csv)
 
